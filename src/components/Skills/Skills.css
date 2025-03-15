@@ -1,0 +1,47 @@
+.card {
+    width: 90%;
+    /* Adjust width for responsiveness */
+    max-width: 500px;
+    /* Prevent it from becoming too wide on large screens */
+    min-height: 25rem;
+    height: fit-content;
+    background: #1D1E22;
+    transition: 0.5s ease-in-out;
+    clip-path: polygon(30px 0%,
+            100% 0,
+            100% calc(100% - 30px),
+            calc(100% - 30px) 100%,
+            0 100%,
+            0% 30px);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px auto;
+    /* Centers the card */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 95%;
+        /* Increase width for smaller screens */
+        min-height: 20rem;
+        /* Reduce height for better fit */
+        clip-path: none;
+        /* Remove the complex shape on smaller screens for better layout */
+        border-radius: 15px;
+        /* Keep smooth edges */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+        /* Full width for small devices */
+        padding: 15px;
+        min-height: auto;
+        /* Adjust height based on content */
+    }
+}
